@@ -8,7 +8,13 @@
         "php": ">=7.0.0",
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "csgt/login" : "5.5",
+        "csgt/menu" : "5.5",
+        "csgt/cancerbero" : "5.5",
+        "csgt/crud" : "5.5",
+        "csgt/components" : "5.5",
+        "csgt/layout" : "5.5"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => ['auth', 'cancerbero', 'menu']], function () {
+    Route::get('/', ['as'=>'index.index', 'uses'=>'HomeController@index']);
 });
