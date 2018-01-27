@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Database\Seeder;
 
-class ModulopermisosSeeder extends Seeder
+class ModulePermissionsSeeder extends Seeder
 {
     private $inserts = [];
     public function run()
@@ -10,11 +10,11 @@ class ModulopermisosSeeder extends Seeder
         DB::table('authmodulopermisos')->truncate();
 
         $this->add(1, 1); //Inicio
-            $this->add(2); //Usuario
-            $this->add(3); //Roles
-            $this->add(4, [1,3]); //Perfil
+        $this->add(2); //Usuario
+        $this->add(3); //Roles
+        $this->add(4, [1,3]); //Perfil
 
-            DB::table('authmodulopermisos')->insert($this->inserts);
+        DB::table('authmodulopermisos')->insert($this->inserts);
         DB::statement('UPDATE authmodulopermisos SET created_at=NOW(), updated_at=NOW()');
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
     }
