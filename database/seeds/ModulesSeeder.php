@@ -2,16 +2,22 @@
 use Illuminate\Database\Seeder;
 use App\Models\Auth\Module;
 
-class ModulosSeeder extends Seeder
+class ModulesSeeder extends Seeder
 {
     public function run()
     {
-        Module::truncate();
-        Module::insert([
-            ['moduloid' => 1, 'nombre' => 'index', 'nombrefriendly' => 'Inicio'],
-            ['moduloid' => 2, 'nombre' => 'usuarios', 'nombrefriendly' => 'Usuarios'],
-            ['moduloid' => 3, 'nombre' => 'roles', 'nombrefriendly' => 'Roles'],
-            ['moduloid' => 4, 'nombre' => 'perfil', 'nombrefriendly' => 'Perfil'],
-        ]);
+        $modules = new Modules;
+
+
+        echo($modules->get()->filter(function ($module) {
+            return $module->permissions !== [];
+        }));
+        // Module::truncate();
+        // Module::insert([
+        //     ['id' => 1, 'name' => 'index', 'description' => 'Inicio'],
+        //     ['id' => 2, 'name' => 'usuarios', 'description' => 'Usuarios'],
+        //     ['id' => 3, 'name' => 'roles', 'description' => 'Roles'],
+        //     ['id' => 4, 'name' => 'perfil', 'description' => 'Perfil'],
+        // ]);
     }
 }

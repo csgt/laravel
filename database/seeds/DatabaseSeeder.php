@@ -10,10 +10,10 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
         Schema::enableForeignKeyConstraints();
-        $this->call('ModulosSeeder');
-        $this->call('PermisosSeeder');
-        $this->call('ModulopermisosSeeder');
-        $this->call('MenuSeeder');
+        $this->call('ModulesSeeder');
+        // $this->call('PermissionsSeeder');
+        // $this->call('ModulopermisosSeeder');
+        // $this->call('MenuSeeder');
         Schema::disableForeignKeyConstraints();
         Model::reguard();
     }
