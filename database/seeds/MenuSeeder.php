@@ -1,51 +1,42 @@
 <?php
 use Illuminate\Database\Seeder;
 
-use App\Models\Cancerbero\Authmodulo;
-use App\Models\Cancerbero\Authpermiso;
-use App\Models\Cancerbero\Authmodulopermiso;
+use App\Models\Auth\Module;
+use App\Models\Auth\ModulePermission;
+use App\Models\Menu;
 
 class MenuSeeder extends Seeder
 {
-    private $modulos = [];
-    private $permisos = [];
-    private $inserts = [];
-
     public function run()
     {
-        $this->modulos  = Authmodulo::select('moduloid', 'nombre')->get();
-        $this->permisos = Authpermiso::select('permisoid', 'nombre')->get();
+        $modules = Module::all();
+        $sections = new Sections;
+        $sections = $sections->get();
 
-        DB::statement('SET FOREIGN_KEY_CHECKS=0');
-        DB::table('authmenu')->truncate();
+        Menu::truncate();
 
-        $this->add('index', 'Inicio', 1000, null, 'fa fa-home');
-        $this->add('catalogos', 'Catálogos', 2000, null, 'fa fa-book');
-        $this->add('usuarios', 'Usuarios', 100, 2, 'fa fa-user');
-        $this->add('roles', 'Roles', 200, 2, 'fa fa-key');
+        foreach ($sections as $section) {
+            $menuItem = new Menu;
 
-        DB::table('authmenu')->insert($this->inserts);
+            $menuItem->icon = $section->icon;
+            $menuItem->name = $section->name;
+            $menuItem->route = $section->module;
+            $menuItem->order = $section->menuOrder;
 
-        DB::statement('UPDATE authmenu SET created_at=NOW(), updated_at=NOW()');
-        DB::statement('SET FOREIGN_KEY_CHECKS=1');
-    }
+            if($section->parentModule) {
+                $parentModule = Menu::where('route', $section->parentModule)->value('id');
+                $menuItem->parent_id = $parentModule;
+            }
 
-    private function add($aModulo, $aNombre, $aOrden, $aPadreId=null, $aIcono=null, $aPermiso='index')
-    {
-        try {
-            $moduloid        = $this->modulos->where('nombre', $aModulo)->first()->moduloid;
-            $permisoid       = $this->permisos->where('nombre', $aPermiso)->first()->permisoid;
-            $modulopermisoid = Authmodulopermiso::where('moduloid', $moduloid)->where('permisoid', $permisoid)->first()->modulopermisoid;
-        } catch (Exception $e) {
-            $modulopermisoid = null;
+            $module = Module::where('name', $section->module)->first();
+            if($module) {
+                $modulePermission = ModulePermission::where('module_id', $module->id)
+                    ->where('permission_id', 1)
+                    ->value('id');
+                $menuItem->module_permission_id = $modulePermission;
+            }
+
+            $menuItem->save();
         }
-
-        $this->inserts[] = [
-            'padreid'            => $aPadreId,
-            'modulopermisoid' => $modulopermisoid,
-            'nombre'             => $aNombre,
-            'orden'                    => $aOrden,
-            'icono'             => $aIcono,
-            ];
     }
 }
