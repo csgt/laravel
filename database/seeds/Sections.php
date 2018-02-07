@@ -3,7 +3,7 @@ use Csgt\Cancerbero\CsgtModule;
 
 // new CsgtModule($aName, $aDescription, $aModule, $aMenuOrder, [$aIcon, $aParentModule, $aPermissions])
 
-class Modules
+class Sections
 {
     public function get()
     {
@@ -12,6 +12,7 @@ class Modules
             new CsgtModule('Catálogos', '', 'catalogos', 2000, 'fa fa-book', null, []),
             new CsgtModule('Usuarios', 'Catálogos - Usuarios', 'catalogos.usuarios', 100, 'fa fa-user', 'catalogos'),
             new CsgtModule('Roles', 'Catálogos - Roles', 'catalogos.roles', 200, 'fa fa-key', 'catalogos'),
+            new CsgtModule('Clientes', 'Catálogos - Clientes', 'catalogos.clientes', 200, 'fa fa-users', 'catalogos'),
         ]);
     }
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Models\Auth\Permission;
 
-class PermisosSeeder extends Seeder
+class PermissionsSeeder extends Seeder
 {
     public function run()
     {

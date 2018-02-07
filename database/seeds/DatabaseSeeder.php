@@ -9,12 +9,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Model::unguard();
-        Schema::enableForeignKeyConstraints();
-        $this->call('ModulesSeeder');
-        // $this->call('PermissionsSeeder');
-        // $this->call('ModulopermisosSeeder');
-        // $this->call('MenuSeeder');
         Schema::disableForeignKeyConstraints();
+        $this->call('ModulesSeeder');
+        $this->call('PermissionsSeeder');
+        $this->call('ModulePermissionsSeeder');
+        $this->call('MenuSeeder');
+        Schema::enableForeignKeyConstraints();
         Model::reguard();
     }
 }
