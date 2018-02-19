@@ -9,12 +9,12 @@
         "fideloper/proxy": "~4.0",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "~1.0",
-        "csgt/login" : "5.5.*",
-        "csgt/menu" : "5.5.*",
-        "csgt/cancerbero" : "5.5.*",
-        "csgt/crud" : "5.5.*",
-        "csgt/components" : "5.5.*",
-        "csgt/layout" : "5.5.*"
+        "csgt/login" : "5.6.*",
+        "csgt/menu" : "5.6.*",
+        "csgt/cancerbero" : "5.6.*",
+        "csgt/crud" : "5.6.*",
+        "csgt/components" : "5.6.*",
+        "csgt/layout" : "5.6.*"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
@@ -52,7 +52,8 @@
             "@php artisan key:generate",
             "@php artisan auth:reminders",
             "@php artisan make:csgtcancerbero",
-            "@php artisan vendor:publish --all"
+            "@php artisan make:csgtauth",
+            "@php artisan vendor:publish --all",
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",

@@ -35,10 +35,12 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map()
     {
-        $this->mapApiRoutes();
-
         $this->mapWebRoutes();
 
+        $this->mapApiRoutes();
+
+        $this->mapAuthRoutes();
+        // $this->mapComponentsRoutes();
         //
     }
 
@@ -70,4 +72,18 @@ class RouteServiceProvider extends ServiceProvider
              ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
     }
+
+    protected function mapAuthRoutes()
+    {
+        Route::middleware('web')
+             ->namespace($this->namespace . '\Auth')
+             ->group(base_path('routes/core/auth.php'));
+    }
+
+    // protected function mapComponentsRoutes()
+    // {
+    //     Route::middleware(['web','cancerbero'])
+    //          ->namespace($this->namespace)
+    //          ->group(base_path('routes/core/components.php'));
+    // }
 }
