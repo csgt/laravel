@@ -53,7 +53,7 @@
             "@php artisan auth:reminders",
             "@php artisan make:csgtcancerbero",
             "@php artisan make:csgtauth",
-            "@php artisan vendor:publish --all",
+            "@php artisan vendor:publish --all"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
