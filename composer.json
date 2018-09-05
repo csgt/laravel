@@ -9,7 +9,7 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-        "csgt/login": "dev-master",
+        "csgt/login": "5.7.*-dev",
         "csgt/menu" : "5.7.*",
         "csgt/cancerbero" : "5.7.*",
         "csgt/crud" : "5.7.*",
