@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Providers;
 
 use Illuminate\Support\Facades\Route;
@@ -35,12 +34,10 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map()
     {
-        $this->mapWebRoutes();
-
         $this->mapApiRoutes();
 
-        $this->mapAuthRoutes();
-        // $this->mapComponentsRoutes();
+        $this->mapWebRoutes();
+
         //
     }
 
@@ -54,8 +51,8 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes()
     {
         Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
+            ->namespace($this->namespace)
+            ->group(base_path('routes/web.php'));
     }
 
     /**
@@ -68,22 +65,8 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
         Route::prefix('api')
-             ->middleware('api')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/api.php'));
+            ->middleware('api')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/api.php'));
     }
-
-    protected function mapAuthRoutes()
-    {
-        Route::middleware('web')
-             ->namespace($this->namespace . '\Auth')
-             ->group(base_path('routes/core/auth.php'));
-    }
-
-    // protected function mapComponentsRoutes()
-    // {
-    //     Route::middleware(['web','cancerbero'])
-    //          ->namespace($this->namespace)
-    //          ->group(base_path('routes/core/components.php'));
-    // }
 }
