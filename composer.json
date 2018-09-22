@@ -10,11 +10,11 @@
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
         "csgt/login": "5.7.*-dev",
-        "csgt/menu" : "5.7.*",
-        "csgt/cancerbero" : "5.7.*",
-        "csgt/crud" : "5.7.*",
-        "csgt/utils" : "5.7.*",
-        "csgt/layout" : "5.7.*"
+        "csgt/menu" : "5.7.*-dev",
+        "csgt/cancerbero" : "5.7.*-dev",
+        "csgt/crud" : "5.7.*-dev",
+        "csgt/utils" : "5.7.*-dev",
+        "csgt/layout" : "5.7.*-dev"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
