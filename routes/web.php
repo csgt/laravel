@@ -14,7 +14,7 @@
 Route::group(['middleware' => ['auth', 'cancerbero', 'menu']], function () {
     Route::get('/', ['as' => 'index.index', 'uses' => 'HomeController@index']);
 
-    Route::namespace ('Catalogos')->prefix('catalogos')->name('catalogos.')->group(function () {
+    Route::namespace ('Catalogs')->prefix('catalogos')->name('catalogos.')->group(function () {
         Route::resource('usuarios', 'UsersController');
         Route::resource('roles', 'RolesController');
     });
