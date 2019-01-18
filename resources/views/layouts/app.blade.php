@@ -53,6 +53,16 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         {!! session()->get('menu') !!}
+                        <li class="nav-header">USUARIO</li>
+                        <li class="nav-item">
+                            <form action="/logout" method="post">
+                                {{csrf_field()}}
+                                <a href='#' onclick='this.parentNode.submit(); return false;' class="nav-link">
+                                    <i class="nav-icon fa fa-sign-out-alt"></i>
+                                    <p>Cerrar sesión</p>
+                                </a>
+                            </form>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -89,5 +99,12 @@
 
     <script src="{{ mix('js/app.js') }}"></script>
     @yield('javascript')
+    <script>
+        $(document).ready(function() {
+            var navParent = $('.nav-item .active').closest('.has-treeview');
+            navParent.addClass('menu-open');
+            navParent.children('.nav-link').addClass('active');
+        });
+    </script>
 </body>
 </html>

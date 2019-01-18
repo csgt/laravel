@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Seeder;
 use App\Models\Auth\Permission;
+use Illuminate\Database\Seeder;
 
 class PermissionsSeeder extends Seeder
 {
@@ -12,41 +12,55 @@ class PermissionsSeeder extends Seeder
         Permission::insert([
             [
                 'id'          => 1,
+                'parent_id'   => null,
                 'name'        => 'index',
                 'description' => 'Ver',
             ],
             [
                 'id'          => 2,
+                'parent_id'   => null,
                 'name'        => 'create',
                 'description' => 'Crear',
             ],
             [
                 'id'          => 3,
+                'parent_id'   => 2,
                 'name'        => 'store',
                 'description' => 'Guardar',
             ],
             [
                 'id'          => 4,
+                'parent_id'   => null,
                 'name'        => 'edit',
                 'description' => 'Editar',
             ],
             [
                 'id'          => 5,
+                'parent_id'   => 4,
                 'name'        => 'update',
                 'description' => 'Actualizar',
             ],
             [
                 'id'          => 6,
+                'parent_id'   => null,
                 'name'        => 'destroy',
                 'description' => 'Borrar',
             ],
             [
                 'id'          => 7,
+                'parent_id'   => 1,
                 'name'        => 'data',
                 'description' => 'Obtener datos',
             ],
             [
                 'id'          => 8,
+                'parent_id'   => 4,
+                'name'        => 'detail',
+                'description' => 'Obtener datos edición',
+            ],
+            [
+                'id'          => 9,
+                'parent_id'   => null,
                 'name'        => 'show',
                 'description' => 'Información',
             ],
