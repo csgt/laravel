@@ -18,4 +18,6 @@ Route::group(['middleware' => ['auth', 'cancerbero', 'menu']], function () {
         Route::resource('usuarios', 'UsersController');
         Route::resource('roles', 'RolesController');
     });
+    Route::resource('tags', 'TagsController');
 });
+Auth::routes();
