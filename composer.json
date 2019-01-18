@@ -12,11 +12,11 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-        "csgt/login": "5.7.*-dev",
-        "csgt/menu" : "5.7.*-dev",
-        "csgt/cancerbero" : "5.7.*-dev",
-        "csgt/crud" : "5.7.*-dev",
-        "csgt/utils" : "5.7.*-dev"
+        "csgt/login": "5.7.*",
+        "csgt/menu" : "5.7.*",
+        "csgt/cancerbero" : "5.7.*",
+        "csgt/crud" : "5.7.*",
+        "csgt/utils" : "5.7.*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
@@ -68,7 +68,7 @@
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover"
+            "@php artisan package:discover",
             "@php artisan key:generate --ansi"
         ]
     }
