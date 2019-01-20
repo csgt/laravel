@@ -1,6 +1,6 @@
 # Release Notes
 
-## [v5.7.0 (2018-09-04)](https://github.com/laravel/laravel/compare/v5.6.33...v5.7.0)
+## [v5.7.0 (2018-09-04)](https://github.com/laravel/laravel/compare/v5.6.33...v5.7.0) JH
 
 ### Added
 - Added email verification functionality ([#4689](https://github.com/laravel/laravel/pull/4689))
