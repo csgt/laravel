@@ -23,7 +23,7 @@ class InitialSeeder extends Seeder
             'id'         => 1,
             'email'      => 'cs@cs.com.gt',
             'password'   => '$2y$10$zOrPimtXtgVXl/nphcryoeo/mxS0oB6uBQZpmZFIB8M8ad1wc9vMi',
-            'name'       => 'Softlogic',
+            'name'       => config('app.name'),
             'active'     => 1,
             'created_at' => date_create(),
             'updated_at' => date_create(),
