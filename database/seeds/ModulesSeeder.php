@@ -1,6 +1,6 @@
 <?php
-use Illuminate\Database\Seeder;
 use App\Models\Auth\Module;
+use Illuminate\Database\Seeder;
 
 class ModulesSeeder extends Seeder
 {
@@ -12,7 +12,7 @@ class ModulesSeeder extends Seeder
             return $section->permissions !== [];
         });
 
-        $insertModules = collect($modules)->map(function($module) {
+        $insertModules = collect($modules)->map(function ($module) {
             return ['name' => $module->module, 'description' => $module->description];
         })->toArray();
 
