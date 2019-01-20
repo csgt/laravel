@@ -16,7 +16,7 @@
         "csgt/menu" : "5.7.*-dev",
         "csgt/cancerbero" : "5.7.*-dev",
         "csgt/crud" : "5.7.*-dev",
-        "csgt/utils" : "5.7.-dev*"
+        "csgt/utils" : "5.7.*-dev"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
