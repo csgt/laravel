@@ -12,12 +12,12 @@
  */
 
 Route::group(['middleware' => ['auth', 'cancerbero', 'menu']], function () {
-    Route::get('/', ['as' => 'index.index', 'uses' => 'HomeController@index']);
+	Route::get('/', ['as' => 'index.index', 'uses' => 'HomeController@index']);
 
-    Route::namespace ('Catalogs')->prefix('catalogos')->name('catalogos.')->group(function () {
-        Route::resource('usuarios', 'UsersController');
-        Route::resource('roles', 'RolesController');
-    });
-    Route::resource('tags', 'TagsController');
+	Route::namespace ('Catalogs')->prefix('catalogs')->name('catalogs.')->group(function () {
+		Route::resource('users', 'UsersController');
+		Route::resource('roles', 'RolesController');
+	});
+	Route::resource('tags', 'TagsController');
 });
 Auth::routes();
