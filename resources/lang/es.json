@@ -1,0 +1,14 @@
+{
+    "Go Home" : "Regresar al inicio",
+    "Page Expired" : "Página expirada",
+    "Page Not Found" : "Página no econtrada",
+    "Service Unavailable" : "Servicio no disponible",
+    "Sorry, the page you are looking for could not be found." : "Lo sentimos, la página que buscas no fue encontrada.",
+    "Sorry, we are doing some maintenance. Please check back soon." : "Lo siento, estamos haciendo mantenimiento. Por favor revise luego.",
+    "Sorry, you are making too many requests to our servers." : "Lo siento, está realizando muchas peticiones a nuestro servidor.",
+    "Sorry, you are not authorized to access this page." : "Lo siento, no estás autorizado a ver esta página.",
+    "Sorry, your session has expired. Please refresh and try again." : "Lo siento, su sesión ha expirado.  Porfavor refresque y pruebe de nuevo.",
+    "Too Many Requests" : "Demasiadas peticiones",
+    "Unauthorized" : "No autorizado",
+    "Whoops, something went wrong on our servers." : "Whoops, hubo un problema en nuestros servidores",
+}
