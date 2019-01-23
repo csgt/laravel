@@ -24,7 +24,7 @@
         "vue": "^2.5.17"
     },
     "dependencies": {
-        "admin-lte": "^3.0.0-alpha",
+        "admin-lte": "^3.0.0-alpha.2",
         "datatables.net": "^1.10.19",
         "datatables.net-bs4": "^1.10.19",
         "datatables.net-responsive": "^2.2.3",
