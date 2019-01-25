@@ -1,11 +1,8 @@
 <template>
-    <EditProvider :value="this.data">
-    <EditConsumer>
-        <div class="card" slot-scope="context">
+        <div class="card">
 
             <div class="card-body">
                 <div class="row">
-                    {{context}}
                     <InputField label="Nombre" :value="data.role.name" />
                     <div class="form-group col-sm-12">
                         <label for="nombre">Nombre</label>
@@ -27,8 +24,6 @@
                 <button class="btn btn-primary">Guardar</button>
             </div>
         </div>
-    </EditConsumer>
-    </EditProvider>
 </template>
 <script>
     import axios from 'axios';

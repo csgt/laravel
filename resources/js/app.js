@@ -14,6 +14,7 @@ window.Vue = require('vue');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+Vue.component('InputField', require('./components/InputField.vue').default)
 
 Vue.component('catalogs-roles-edit', require('./views/catalogs/RolesEdit.vue'))
 Vue.component('catalogs-rolemodule', require('./views/catalogs/RoleModule.vue'))

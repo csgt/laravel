@@ -1,6 +1,5 @@
 <template>
-    <EditConsumer>
-    <div :class="color" slot-scope="context">
+    <div :class="color">
         <div class="card-header">
             {{module.description}}
             <div class="card-tools">
@@ -18,7 +17,6 @@
             <a href="javascript:void(0);" @click="set(true)">Todos</a> | <a href="javascript:void(0);" @click="set(false)">Ninguno</a>
         </div>
     </div>
-    </EditConsumer>
 </template>
 <script>
     export default {
