@@ -8,7 +8,6 @@ class MenuSeeder extends Seeder
 {
     public function run()
     {
-        $modules  = Module::all();
         $sections = new Sections;
         $sections = $sections->get();
 
@@ -30,7 +29,7 @@ class MenuSeeder extends Seeder
             $module = Module::where('name', $section->module)->first();
             if ($module) {
                 $modulePermission = ModulePermission::where('module_id', $module->id)
-                    ->where('permission_id', 1)
+                    ->where('permission_id', $section->menuPermission)
                     ->value('id');
                 $menuItem->module_permission_id = $modulePermission;
             }

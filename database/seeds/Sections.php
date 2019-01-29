@@ -1,7 +1,7 @@
 <?php
 use Csgt\Cancerbero\CsgtModule;
 
-// new CsgtModule($aName, $aDescription, $aModule, $aMenuOrder, [$aIcon, $aParentModule, $aPermissions])
+// new CsgtModule($aName, $aDescription, $aModule, $aMenuOrder, [$aIcon=null, $aParentModule=null, $aPermissions=CsgtModule::ALL, $aMenuPermission = 1])
 
 class Sections
 {
