@@ -15,5 +15,11 @@
   @endif
 @stop
 @section('content')
-    <{{ $component }}/>
+    <{{ $component }}
+        @if(isset($params))
+            @foreach($params as $param => $val)
+                {{':' . $param . '="' . $val . '"' }}
+            @endforeach
+        @endif
+    />
 @stop
