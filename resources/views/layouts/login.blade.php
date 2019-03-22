@@ -8,7 +8,7 @@
         <meta name="author" content="{{env('APP_COMPANY')}}">
         <meta name="csrf-token" content="{{csrf_token()}}">
         <title>Login - {{config('app.name')}}</title>
-        <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ mix('dist/css/app.css') }}">
     </head>
     <body class="hold-transition login-page">
         <div class="login-box" id="app">
@@ -21,6 +21,6 @@
                 </div>
             </div>
         </div>
-        <script src="{{ mix('/js/app.js') }}"></script>
+        <script src="{{ mix('dist/js/app.js') }}"></script>
     </body>
 </html>
