@@ -14,6 +14,9 @@ class MenuSeeder extends Seeder
         Menu::truncate();
 
         foreach ($sections as $section) {
+            if ($section->menuPermission === 0) {
+                continue;
+            }
             $menuItem = new Menu;
 
             $menuItem->icon  = $section->icon;
