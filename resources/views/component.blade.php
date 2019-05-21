@@ -18,7 +18,11 @@
     <{{ $component }}
         @if(isset($params))
             @foreach($params as $param => $val)
-                {{':' . $param . '="' . $val . '"' }}
+                @if(is_object($val))
+                    :{{$param}} = "{{ json_encode($val) }}"
+                @else
+                    {{$param}} = "{{$val}}"
+                @endif
             @endforeach
         @endif
     />
