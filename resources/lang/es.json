@@ -1,0 +1,19 @@
+{
+    "Go Home" : "Regresar al inicio",
+    "Invalid Operation" : "Operación inválida",
+    "Method Not Allowed" : "Método No Permitido",
+    "Model Not Found" : "Modelo No Encontrado",
+    "Page Expired" : "Página Expirada",
+    "Page Not Found" : "Página No Econtrada",
+    "Resource Not Found" : "Recurso No Econtrado",
+    "Service Unavailable" : "Servicio No Disponible",
+    "Sorry, the page you are looking for could not be found." : "Lo sentimos, la página que buscas no fue encontrada.",
+    "Sorry, we are doing some maintenance. Please check back soon." : "Lo siento, estamos haciendo mantenimiento. Por favor revise luego.",
+    "Sorry, you are making too many requests to our servers." : "Lo siento, está realizando muchas peticiones a nuestro servidor.",
+    "Sorry, you are not authorized to access this page." : "Lo siento, no estás autorizado a ver esta página.",
+    "Sorry, your session has expired. Please refresh and try again." : "Lo siento, su sesión ha expirado.  Porfavor refresque y pruebe de nuevo.",
+    "Too Many Requests" : "Demasiadas peticiones",
+    "Unauthorized" : "No Autorizado",
+    "Validation Failed" : "Los datos no pasaron la validación",
+    "Whoops, something went wrong on our servers." : "Whoops, hubo un problema en nuestros servidores"
+}

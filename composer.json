@@ -1,5 +1,5 @@
 {
-    "name": "laravel/laravel",
+    "name": "csgt/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
     "keywords": [
@@ -10,8 +10,11 @@
     "require": {
         "php": "^7.1.3",
         "fideloper/proxy": "^4.0",
-        "laravel/framework": "5.8.*",
-        "laravel/tinker": "^1.0"
+        "csgt/login": "5.7.*-dev",
+        "csgt/menu" : "5.7.*-dev",
+        "csgt/cancerbero" : "5.7.*-dev",
+        "csgt/crud" : "5.7.*-dev",
+        "csgt/utils" : "5.7.*-dev"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
@@ -56,7 +59,11 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
+            "@php artisan key:generate --ansi",
+            "@php artisan make:csgtcancerbero",
+            "@php artisan make:csgtauth",
+            "@php artisan make:csgtmenu",
+            "@php artisan vendor:publish --all"
         ]
     }
 }

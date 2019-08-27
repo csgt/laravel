@@ -9,8 +9,14 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => ['auth', 'cancerbero', 'menu']], function () {
+    Route::get('/', ['as' => 'index.index', 'uses' => 'HomeController@index']);
+    Route::get('home', ['as' => 'index.index', 'uses' => 'HomeController@index']);
+
+    Route::namespace ('Catalogs')->prefix('catalogs')->name('catalogs.')->group(function () {
+        Route::resource('users', 'UsersController');
+        Route::resource('roles', 'RolesController');
+    });
 });
