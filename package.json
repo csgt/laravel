@@ -32,6 +32,6 @@
         "datatables.net-responsive-bs4": "^2.2.3",
         "vue2-selectize": "^1.1.7",
         "vue-bootstrap-datetimepicker": "^5.0.1",
-        "vue-moment": "^4.0.0",
+        "vue-moment": "^4.0.0"
     }
 }
