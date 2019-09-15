@@ -16,8 +16,14 @@ const mix = require('laravel-mix');
         'moment': ['moment','window.moment'],
     })
     .js('resources/js/app.js', 'public/dist/js')
-    .sass('resources/sass/app.scss', 'public/dist/css');
+    .sass('resources/sass/app.scss', 'public/dist/css')
+    .options({
+        processCssUrls: false,
+    });
 
 if (mix.inProduction()) {
     mix.version()
+}
+else {
+    mix.sourceMaps()
 }
