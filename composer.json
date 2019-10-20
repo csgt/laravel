@@ -12,12 +12,11 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
-        "csgt/login": "5.7.*",
-        "csgt/menu" : "5.7.*",
-        "csgt/cancerbero" : "5.7.*",
-        "csgt/crud" : "5.7.*",
-        "csgt/utils" : "5.7.*"
-
+        "csgt/login": "6.0.*",
+        "csgt/menu" : "6.0.*",
+        "csgt/cancerbero" : "6.0.*",
+        "csgt/crud" : "6.0.*",
+        "csgt/utils" : "6.0.*"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
