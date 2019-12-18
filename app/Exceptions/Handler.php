@@ -2,7 +2,7 @@
 namespace App\Exceptions;
 
 use Exception;
-use Csgt\Utils\Handler as ExceptionHandler;
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
 {
