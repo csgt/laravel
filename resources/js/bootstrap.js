@@ -1,8 +1,7 @@
 window._ = require('lodash');
 window.Popper = require('popper.js').default;
 
-/**
-<<<<<<< HEAD
+/*
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
  * code may be modified to fit the specific needs of your application.
@@ -18,9 +17,7 @@ require('admin-lte');
 require('datatables.net-bs4');
 require('datatables.net-responsive-bs4');
 
-/**
-=======
->>>>>>> 7d728506191a39394c5d1fcf47a822b9183f50ed
+/*
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
