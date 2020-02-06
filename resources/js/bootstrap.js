@@ -9,7 +9,7 @@ window.Popper = require('popper.js').default;
 
 try {
     window.$ = window.jQuery = require('jquery');
-
+    window.moment = require('moment');
     require('bootstrap');
 } catch (e) {}
 
