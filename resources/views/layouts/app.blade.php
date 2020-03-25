@@ -104,6 +104,13 @@
             var navParent = $('.nav-item .active').closest('.has-treeview');
             navParent.addClass('menu-open');
             navParent.children('.nav-link').addClass('active');
+            @if(session()->has('message'))
+                @if(session()->get('type') == 'danger')
+                toastr.error('{{ session()->get('message') }}')
+                @else
+                toastr.{{ session()->get('type')}}(' {{ session()->get('message') }} ')
+                @endif
+            @endif
         });
     </script>
 </body>

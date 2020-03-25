@@ -10,12 +10,14 @@ window.Popper = require('popper.js').default;
 try {
     window.$ = window.jQuery = require('jquery');
     window.moment = require('moment');
+    window.toastr = require('toastr')
     require('bootstrap');
 } catch (e) {}
 
 require('admin-lte');
 require('datatables.net-bs4');
 require('datatables.net-responsive-bs4');
+require('eonasdan-bootstrap-datetimepicker');
 
 /*
  * We'll load the axios HTTP library which allows us to easily issue requests

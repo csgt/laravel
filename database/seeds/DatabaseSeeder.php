@@ -1,5 +1,6 @@
 <?php
 
+use Cache;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Eloquent\Model;
@@ -22,5 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call('MenuSeeder');
         Schema::enableForeignKeyConstraints();
         Model::reguard();
+
+        Cache::flush();
     }
 }
