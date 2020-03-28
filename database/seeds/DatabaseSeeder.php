@@ -1,6 +1,5 @@
 <?php
 
-use Cache;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Eloquent\Model;
