@@ -33,6 +33,7 @@
         "vue-bootstrap-datetimepicker": "^5.0.1",
         "vue-moment": "^4.0.0",
         "eonasdan-bootstrap-datetimepicker": "^4.17.47",
-        "toastr": "^2.1.4"
+        "toastr": "^2.1.4",
+        "moment": "^2.24.0",
     }
 }
