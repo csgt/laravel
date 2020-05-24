@@ -51,7 +51,7 @@
                 </div>
 
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <ul class="nav nav-pills nav-sidebar nav-child-indent flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         {!! \Csgt\Utils\Menu::menu() !!}
                         <li class="nav-header">USUARIO</li>
                         <li class="nav-item">
