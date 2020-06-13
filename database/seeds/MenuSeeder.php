@@ -39,5 +39,6 @@ class MenuSeeder extends Seeder
 
             $menuItem->save();
         }
+        Cache::flush();
     }
 }
