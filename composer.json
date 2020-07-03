@@ -13,7 +13,12 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+        "csgt/ui" : "^2.0",
+        "csgt/menu" : "^6.0",
+        "csgt/cancerbero" : "^6.0",
+        "csgt/crud" : "^6.0",
+        "csgt/utils" : "^7.0"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
@@ -38,7 +43,8 @@
         },
         "classmap": [
             "database/seeds",
-            "database/factories"
+            "database/factories",
+            "packages/ui"
         ]
     },
     "autoload-dev": {
@@ -57,7 +63,13 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
+            "@php artisan key:generate --ansi",
+            "@php artisan make:csgtcancerbero",
+            "@php artisan make:csgtauth",
+            "@php artisan make:csgtmenu",
+            "@php artisan ui vue",
+            "@php artisan ui vue --auth",
+            "@php artisan vendor:publish --all"
         ]
     }
 }
