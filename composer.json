@@ -64,10 +64,9 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
             "@php artisan make:csgtcancerbero",
-            "@php artisan make:csgtauth",
             "@php artisan make:csgtmenu",
-            "@php artisan ui vue",
-            "@php artisan ui vue --auth",
+            "@php artisan ui adminlte",
+            "@php artisan ui adminlte --auth",
             "@php artisan vendor:publish --all"
         ]
     }
