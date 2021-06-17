@@ -11,7 +11,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
-        "csgt/ui" : "^2.0",
+        "csgt/ui" : "^3.0",
         "csgt/menu" : "^6.0",
         "csgt/cancerbero" : "^6.0",
         "csgt/crud" : "^6.0",
