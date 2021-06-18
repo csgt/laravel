@@ -15,7 +15,7 @@
         "csgt/menu" : "^7.0-dev",
         "csgt/cancerbero" : "^7.0-dev",
         "csgt/crud" : "^6.0",
-        "csgt/utils" : "^7.0-dev"
+        "csgt/utils" : "^8.0-dev"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
