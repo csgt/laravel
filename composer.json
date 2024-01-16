@@ -13,7 +13,7 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
-        "csgt/ui": "^3.0",
+        "csgt/ui": "^2.0",
         "csgt/menu": "^7.0",
         "csgt/cancerbero": "^7.0",
         "csgt/crud": "^8.0",
