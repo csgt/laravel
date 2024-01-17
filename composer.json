@@ -13,6 +13,7 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
+        "laravel/octane": "^2.3",
         "csgt/ui": "^3.0",
         "csgt/menu": "^7.0",
         "csgt/cancerbero": "^7.0",
@@ -52,9 +53,12 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
+            "@php artisan octane:install --server=swoole",
             "@php artisan make:csgtcancerbero",
+            "@php artisan make:csgtmenu",
             "@php artisan ui adminlte",
             "@php artisan ui adminlte --auth",
+            "@php artisan make:csgtdocker",
             "@php artisan vendor:publish --all"
         ]
     },
