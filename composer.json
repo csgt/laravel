@@ -15,7 +15,7 @@
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
         "laravel/octane": "^2.3",
-        "csgt/ui": "^3.0",
+        "csgt/ui": "^4.0",
         "csgt/menu": "^7.0",
         "csgt/cancerbero": "^7.0",
         "csgt/crud": "^8.0",
