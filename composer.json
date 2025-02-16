@@ -17,7 +17,7 @@
         "laravel/octane": "^2.3",
         "csgt/ui": "^4.0",
         "csgt/menu": "^7.0",
-        "csgt/cancerbero": "^7.0",
+        "csgt/cancerbero": "^8.0",
         "csgt/crud": "^8.0",
         "csgt/utils": "^10.0"
     },
