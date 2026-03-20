@@ -13,6 +13,7 @@ export default defineConfig({
             ],
             refresh: true,
         }),
+        tailwindcss(),
     ],
     server: {
         hmr: {
@@ -30,5 +31,8 @@ export default defineConfig({
                 replacement: "vue/dist/vue.esm-bundler.js",
             },
         ],
+    },
+    watch: {
+        ignored: ["**/storage/framework/views/**"],
     },
 });
