@@ -13,6 +13,11 @@ export default defineConfig({
                 "node_modules/admin-lte/dist/js/adminlte.min.js",
             ],
             refresh: true,
+            fonts: [
+                bunny("Instrument Sans", {
+                    weights: [400, 500, 600],
+                }),
+            ],
         }),
         viteStaticCopy({
             targets: [
